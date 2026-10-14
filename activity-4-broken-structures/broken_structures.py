@@ -7,7 +7,7 @@ entirely reasonable.
 
 # ---------- 1: building a grid ----------
 
-grid = [[0] * 3] * 3
+grid = [[0] * 3 for i in range(3)]
 grid[0][0] = 9
 
 print("Grid after setting the top-left corner to 9:")
@@ -27,7 +27,8 @@ def column_total(table, column):
     """Add up one column of the table."""
     total = 0
     for i in range(len(table)):
-        total = total + table[i][i]
+
+        total = total + table[i][column]
     return total
 
 
@@ -49,10 +50,11 @@ def is_at_station(fleet, bike_id, station):
     for bike in fleet:
         if bike["id"] == bike_id and bike["station"] == station:
             return True
-        else:
-            return False
+    return False        
+        
 
 
 print("---")
 print(f"B-104 at Kings Cross? {is_at_station(fleet, 'B-104', 'Kings Cross')}")
 print(f"B-111 at Kings Cross? {is_at_station(fleet, 'B-111', 'Kings Cross')}")
+print(f"B-107 at Shoreditch? {is_at_station(fleet, 'B-107', 'Kings Cross')}")

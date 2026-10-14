@@ -2,4 +2,12 @@ Sheffield,82
 Manchester,141
 Norwich,forty-seven
 Cardiff,116
-Aberdeen
+Cardiff,126
+London,95
+Bristol,62
+Bristol,63
+Leeds,bad_value
+Edinburgh,74
+Belfast,55
+Oxford,invalid
+Glasgow,88

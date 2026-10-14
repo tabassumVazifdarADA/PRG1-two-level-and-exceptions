@@ -48,10 +48,14 @@ def bikes_at(fleet, station):
 
 
 def average_battery(fleet):
-    total = 0
+    total_battery = 0
+    count = 0
     for bike in fleet:
-        total = total + bike["battery"]
-    return total / len(fleet)
+        if bike.get["available"]:
+            total += bike["battery"]
+    if count == 0:
+        return 0
+    return total_battery / count
 
 
 print(f"{len(fleet)} bikes in the fleet")
@@ -61,3 +65,10 @@ print(f"Ready to hire: {ready_to_hire(fleet)}")
 print(f"Needs charging: {needs_charging(fleet)}")
 print(f"At Kings Cross: {bikes_at(fleet, 'Kings Cross')}")
 print(f"Average battery: {average_battery(fleet):.1f}%")
+
+print(f"Bikes at Shoreditch: {bikes_at(fleet, "Shoreditch")}")
+
+
+
+
+print(fleet[1]["battery"])

@@ -2,7 +2,7 @@ scores = [[78, 81, 84],
           [55, 54, 62],
           [89, 71, 90]]
 
-print(scores[1][2])
+print(scores[1])
 print(len(scores))
 print(len(scores[0]))
 
