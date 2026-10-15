@@ -6,6 +6,7 @@ Cardiff,126
 London,95
 Bristol,62
 Bristol,63
+London,97
 Leeds,bad_value
 Edinburgh,74
 Belfast,55
